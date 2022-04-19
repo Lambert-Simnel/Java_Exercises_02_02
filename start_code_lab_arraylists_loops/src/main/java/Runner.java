@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Runner {
@@ -15,14 +16,25 @@ public class Runner {
         scottishIslands.add("Tresco");
 
 //        1. Add "Coll" to the end of the list
+        scottishIslands.add("Coll");
 //        2. Add "Tiree" to the start of the list
+        scottishIslands.add(0,"Tiree");
 //        3. Add "Islay" after "Jura" and before "Mull"
+        scottishIslands.add(scottishIslands.indexOf("Jura") + 1, "Islay");
 //        4. Print out the index position of "Skye"
+        System.out.println(scottishIslands.indexOf("Skye"));
 //        5. Remove "Tresco" from the list by name
+        scottishIslands.remove("Tresco");
 //        6. Remove "Arran" from the list by index
+        scottishIslands.remove(scottishIslands.indexOf("Arran"));
 //        7. Print the number of islands in your arraylist
+        System.out.println(scottishIslands.size());
 //        8. Sort the list alphabetically
+        scottishIslands.sort(Comparator.naturalOrder());
 //        9. Print out all the islands using a for loop
+        for (int i = 0; i < scottishIslands.size(); i++) {
+            System.out.println(scottishIslands.get(i));
+        }
 
         System.out.println(scottishIslands);
 
@@ -33,7 +45,15 @@ public class Runner {
         System.out.println("numbers: " + numbers);
 
 //        1. Print out a list of the even integers
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) % 2 == 0) {
+                System.out.println(numbers.get(i));
+            }
+        }
 //        2. Print the difference between the largest and smallest value
+        for (int i = 0; i < numbers.size(); i++) {
+
+        }
 //        3. Print true if the list contains a 1 next to a 1 somewhere
 //        4. Print the sum of the numbers
 //        5. Print the sum of the numbers...
